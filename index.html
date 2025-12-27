@@ -1,340 +1,338 @@
 <!DOCTYPE html>
-  <style>
-    #creators {
-      text-align: center;
-      padding: 80px 20px;
-      background: #000;
-      color: #fff;
-      overflow: hidden;
-    }
-
-    .carousel-container {
-      position: relative;
-      max-width: 1100px;
-      margin: 0 auto;
-      overflow: hidden;
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.6s ease;
-    }
-
-    .creator-card {
-      flex: 0 0 calc(100% / 3);
-      box-sizing: border-box;
-      background: #111;
-      border-radius: 16px;
-      margin: 10px;
-      text-align: center;
-      padding: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .creator-card img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 12px;
-    }
-
-    .creator-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    }
-
-    .carousel-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      color: #fff;
-      font-size: 32px;
-      cursor: pointer;
-      padding: 8px 16px;
-      border-radius: 50%;
-      transition: background 0.3s ease;
-      z-index: 10;
-    }
-
-    .carousel-arrow:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-
-    .carousel-arrow.prev {
-      left: 10px;
-    }
-
-    .carousel-arrow.next {
-      right: 10px;
-    }
-
-    @media (max-width: 900px) {
-      .creator-card {
-        flex: 0 0 calc(100% / 2);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .creator-card {
-        flex: 0 0 100%;
-      }
-    }
-  </style>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SocialFurs</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-<script type="text/javascript">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SocialFurs, Private Creative Community</title>
+
+  <meta name="description"
+        content="SocialFurs is a private, curated creative community for furry and therian creators. Built around trust, safety, and intentional collaboration.">
+
+  <meta name="keywords"
+        content="furry community, therian community, furry creators, private creative platform, furry artists, therian artists, furry events">
+
+  <meta name="author" content="SocialFurs">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+
+  <meta http-equiv="content-language" content="en-GB">
+
+  <link rel="canonical" href="https://socialfurs.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="SocialFurs">
+  <meta property="og:title" content="SocialFurs, Private Creative Community">
+  <meta property="og:description"
+        content="A private platform for furry and therian creators focused on safety, moderation, and meaningful collaboration.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://socialfurs.com/">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SocialFurs">
+  <meta name="twitter:description"
+        content="A private creative community for furry and therian creators.">
+
+  <!-- Visual polish -->
+  <meta name="theme-color" content="#0b0b0f">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Microsoft Clarity (original, unchanged) -->
+  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "tt6wsdhwye");
-</script>
-  </head>
-<body>
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <img src="logow.png" alt="SocialFurs Logo" class="logo">
-    <ul class="nav-links">
-      <li><a href="#features">Features</a></li>
-      <li><a href="#howitworks">How It Works</a></li>
-      <li><a href="#creators">Creators</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#community">Community</a></li>
-      <li><a href="#newsletter">Join</a></li>
-    </ul>
-    <button class="menu-toggle">&#9776;</button>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-bg"></div>
-    <div class="floating-shapes">
-      <div class="shape shape1"></div>
-      <div class="shape shape2"></div>
-      <div class="shape shape3"></div>
-      <div class="shape shape4"></div>
-      <div class="shape shape5"></div>
-      <div class="shape shape6"></div>
-      <div class="shape shape7"></div>
-      <div class="shape shape8"></div>
-      <div class="shape shape9"></div>
-      <div class="shape shape10"></div>
-    </div>
-    <div class="hero-content">
-      <img src="logow.png">
-      <p>Connect, showcase your talent, and join a vibrant community of creators, musicians, TikTokers, and event organisers. Your profile, your stage.</p>
-      <div class="hero-buttons">
-        <a href="#newsletter" class="cta-button">Join Now</a>
-        <a href="#creators" class="cta-secondary">Explore Creators</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section class="section" id="features">
-    <h2>Why SocialFurs?</h2>
-    <p>We provide a modern, interactive platform for furries, therians, and creative souls to showcase their skills and collaborate on projects, music, events, and content creation.</p>
-    <div class="feature-grid container">
-      <div class="feature-card">
-        <div class="icon">🎨</div>
-        <h3>Showcase Your Talent</h3>
-        <p>Create your profile and display your music, art, and videos to a supportive audience.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">🤝</div>
-        <h3>Connect & Collaborate</h3>
-        <p>Meet like-minded creators, collaborate on projects, or organise community events.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">📱</div>
-        <h3>Social Media Integration</h3>
-        <p>Link your TikTok, YouTube, or Instagram to your profile seamlessly.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">🚀</div>
-        <h3>Grow Your Audience</h3>
-        <p>Get discovered by fans and other creators with our featured spotlight section.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">💡</div>
-        <h3>Community Support</h3>
-        <p>Get feedback, advice, and encouragement from fellow creators in the community.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">🎉</div>
-        <h3>Events & Meetups</h3>
-        <p>Participate in local and online events, from art shows to music collabs.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="section" id="howitworks">
-    <h2>How It Works</h2>
-    <p>Three simple steps to get started and become part of the SocialFurs community.</p>
-    <div class="steps-grid container">
-      <div class="step-card">
-        <div class="step-number">1</div>
-        <h3>Create Your Profile</h3>
-        <p>Add your bio, links, and showcase your talent with photos and videos.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">2</div>
-        <h3>Join Projects & Events</h3>
-        <p>Participate in community projects, collaborations, or online/offline events.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">3</div>
-        <h3>Grow & Shine</h3>
-        <p>Get featured, gain followers, and become part of a thriving creative community.</p>
-      </div>
-    </div>
-  </section>
-
-<section class="section" id="creators">
-  <h2>Meet Our Creators</h2>
-  <p>Click on a creator to view their profile and see their amazing work.</p>
-
-  <div class="carousel-container">
-    <button class="carousel-arrow prev">&#10094;</button>
-
-    <div class="carousel-track">
-      <div class="creator-card">
-          <a href="kenziethefloof.html">
-        <img src="/creatorassets/kenziethefloof/pfp.webp" alt="KenzieTheFloof">
-        <h3>KenzieTheFloof</h3>
-        <p>Event Organiser, Video Editor, Actor, &amp; Director</p>
-          </a>
-      </div>
-    </div>
-
-    <button class="carousel-arrow next">&#10095;</button>
-  </div>
-
-
-
-  <script>
-    const track = document.querySelector('#creators .carousel-track');
-    const prevBtn = document.querySelector('#creators .carousel-arrow.prev');
-    const nextBtn = document.querySelector('#creators .carousel-arrow.next');
-    const cards = Array.from(document.querySelectorAll('#creators .creator-card'));
-
-    let index = 0;
-
-    function getVisibleCards() {
-      if (window.innerWidth <= 600) return 1;
-      if (window.innerWidth <= 900) return 2;
-      return 3;
-    }
-
-    function updateCarousel() {
-      const visible = getVisibleCards();
-      const cardWidth = track.clientWidth / visible;
-      track.style.transform = `translateX(-${index * cardWidth}px)`;
-    }
-
-    function nextSlide() {
-      const visible = getVisibleCards();
-      index++;
-      if (index > cards.length - visible) index = 0;
-      updateCarousel();
-    }
-
-    function prevSlide() {
-      const visible = getVisibleCards();
-      index--;
-      if (index < 0) index = cards.length - visible;
-      updateCarousel();
-    }
-
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-    window.addEventListener('resize', updateCarousel);
-
-    // auto-loop every 4s
-    setInterval(nextSlide, 4000);
-    updateCarousel();
   </script>
-</section>
 
-  <!-- PROJECTS / EVENTS -->
-  <section class="section" id="projects">
-    <h2>Projects &amp; Events</h2>
-    <p>Get involved with exciting projects and community events.</p>
-    <div class="carousel-container">
-    <button class="carousel-arrow prev">&#10094;</button>
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SocialFurs",
+    "url": "https://socialfurs.com/",
+    "logo": "https://socialfurs.com/logow.png",
+    "description": "Private creative community for furry and therian creators",s
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0b0b0f;
+      --bg-soft: #11111a;
+      --card: #161620;
+      --accent: #9900ef;
+      --text: #ffffff;
+      --muted: #b8b8c6;
+      --border: rgba(255,255,255,0.08);
+    }
 
-    <div class="carousel-track">
-      <div class="creator-card">
-          <a href="https://furosion.com">
-        <img src="projectassets/furosion/logo.webp" alt="Furosion Logo">
-        <h3>Furosion</h3>
-        <p>A social furry &amp; therian outing for those who are under 18 in the community and want to feel safe with and event forpeople in their age category.</p>
-              <p><strong>By: KenzieTheFloof</strong></p>
-          </a>
-      </div>
-    </div>
+    * {
+      box-sizing: border-box;
+    }
 
-    <button class="carousel-arrow next">&#10095;</button>
+    html {
+      scroll-behaviour: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      background:
+        radial-gradient(900px circle at top, rgba(153,0,239,0.12), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Roboto Slab', serif;
+      letter-spacing: -0.02em;
+      margin: 0 0 14px;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    section {
+      padding: 150px 22px;
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: centre;
+    }
+
+    /* entrance animation */
+    .fade {
+      opacity: 0;
+      transform: translateY(28px);
+      animation: fadeUp 0.9s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* LOGO INTRO */
+    .intro {
+      padding-top: 120px;
+      padding-bottom: 0;
+    }
+
+    .intro img {
+      width: 110px;
+      margin-bottom: 48px;
+      opacity: 0.9;
+    }
+
+    /* HERO */
+    .hero h1 {
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 30px auto 0;
+      font-size: 1.05rem;
+    }
+
+    .divider {
+      margin: 90px auto 0;
+      width: 120px;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,0.25),
+        transparent
+      );
+    }
+
+    .soft {
+      background: var(--bg-soft);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 36px;
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .creator {
+      margin-top: 64px;
+      padding: 36px;
+      background: var(--card);
+      border-radius: 22px;
+      border: 1px solid var(--border);
+    }
+
+    .creator img {
+      width: 160px;
+      border-radius: 18px;
+      margin-bottom: 20px;
+    }
+
+    .invite {
+      display: inline-block;
+      margin-top: 52px;
+      padding: 14px 40px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 100px 22px;
+      text-align: centre;
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+<p style="position:absolute; width:1px; height:1px; overflow:hidden; opacity:0;">
+  SocialFurs is a private creative platform for furry and therian artists,
+  musicians, editors, and community organisers, designed around safety,
+  moderation, and responsible collaboration.
+</p>
+<main>
+
+<section class="intro">
+  <div class="wrap">
+    <!-- swap logo.png or logow.png here -->
+    <img src="logow.png" alt="SocialFurs logo" class="fade">
   </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section" id="testimonials">
-    <h2>Community Testimonials</h2>
-    <p>Hear what our creators have to say about SocialFurs.</p>
-    <div class="testimonials-grid container">
-      <div class="testimonial-card">
-        <p>"Socialfurs is an amazing commmunity to find other like-minded furry talents that can help me with suggestions and feedbacks for my projects."</p>
-        <h4>- KenzieTheFloof</h4>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMMUNITY SPOTLIGHT -->
-  <section class="section" id="community">
-    <h2>Community Spotlight</h2>
-    <p>Discover trending creators, collaborations, and featured projects this month.</p>
-    <div class="projects-grid container">
-      <div class="project-card">
-        <h3>First under-18 Furry Outing in Bratislava</h3>
-        <p>KenzieTheFloofs’s Furosion Outings is the first official under 18 repeating furry &amp; therian outing in the city of Bratislava, Slovakia!</p>
-      </div>
-    </div>
-  </section>
-
-<!-- NEWSLETTER / JOIN CTA -->
-<section class="section" id="newsletter">
-  <h2>Join SocialFurs</h2>
-  <p>Apply now by clicking the button below.</p>
-  <form class="newsletter-form" onsubmit="window.open('https://socialfurs.fillout.com/apply', '_blank'); return false;">
-    <div style="display:flex; justify-content:center;">
-<div data-fillout-id="3PL7RQXhMjus" data-fillout-embed-type="popup" data-fillout-button-text="Join Now" data-fillout-dynamic-resize data-fillout-button-color="#9900EF" data-fillout-inherit-parameters data-fillout-popup-size="medium"></div><script src="https://server.fillout.com/embed/v1/"></script>    </div>
-  </form>
 </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 SocialFurs. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a> | <a href="#">Terms</a>
-      </div>
-      <div class="social-icons">
-          <p>@socialfurs on Tiktok &amp; Instagram</p>
-      </div>
-    </div>
-  </footer>
+<section class="hero">
+  <div class="wrap">
+    <h1 class="fade delay-1">
+      A private creative community for those who value trust and intention
+    </h1>
+    <p class="fade delay-2">
+      SocialFurs is a curated space for furry and therian creators who want to
+      build meaningful work, collaborate responsibly, and exist outside the noise
+      of mainstream platforms.
+    </p>
+    <div class="divider fade delay-3"></div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<section class="soft">
+  <div class="wrap">
+    <h2 class="fade">Designed to stay small on purpose</h2>
+    <p class="fade delay-1">
+      Growth is not the primary goal. Stability, safety, and creative longevity are.
+    </p>
+
+    <div class="card fade delay-2">
+      <h3>Curated access</h3>
+      <p>
+        Membership is reviewed manually. This allows the community to maintain
+        clear boundaries, age safety, and shared expectations.
+      </p>
+    </div>
+
+    <div class="card fade delay-3">
+      <h3>No public performance</h3>
+      <p>
+        There are no follower counts, no engagement races, and no algorithmic feeds.
+        Work is shared because it matters, not because it performs.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="fade">What the platform supports</h2>
+    <p class="fade delay-1">
+      SocialFurs exists to support real creative output and real world connection.
+    </p>
+
+    <div class="card fade delay-2">
+      <h3>Focused creator profiles</h3>
+      <p>
+        Profiles highlight work, interests, and ongoing projects without distraction
+        or pressure to constantly update.
+      </p>
+    </div>
+
+    <div class="card fade delay-3">
+      <h3>Projects and collaborations</h3>
+      <p>
+        Members organise and participate in editing teams, music projects,
+        community initiatives, and moderated events.
+      </p>
+    </div>
+
+    <div class="card fade delay-3">
+      <h3>Offline responsibility</h3>
+      <p>
+        When real world events exist, they are handled with clear rules,
+        supervision, and safety as a baseline requirement.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="fade">Requesting access</h2>
+    <p class="fade delay-1">
+      Access to SocialFurs is application based. This ensures the community
+      remains respectful, safe, and aligned.
+    </p>
+
+    <p class="fade delay-2" style="margin-top:30px;">
+      Accepted members gain access to the full platform and ongoing projects.
+    </p>
+
+    <a href="https://socialfurs.fillout.com/apply"
+       target="_blank"
+       class="invite fade delay-3">
+      Request an invitation
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 SocialFurs</p>
+  <p>We see your idea, you see our support.</p>
+</footer>
+
 </body>
 </html>

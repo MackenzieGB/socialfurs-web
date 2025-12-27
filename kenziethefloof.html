@@ -1,291 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "tt6wsdhwye");
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KenzieTheFloof - SocialFurs</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<title>KenzieTheFloof | SocialFurs Creator</title>
+<meta name="description" content="Official SocialFurs creator profile for KenzieTheFloof, event organiser, video editor, actor and director.">
+<meta property="og:title" content="KenzieTheFloof | SocialFurs Creator">
+<meta property="og:description" content="Official SocialFurs creator profile for KenzieTheFloof. Connect with Kenzie online.">
+<meta property="og:url" content="https://socialfurs.com">
+<meta property="og:image" content="https://socialfurs.com/logow.png">
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "tt6wsdhwye");
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 :root {
-  --bg-color: #0f0e13;
-  --accent1: #ff7ca3;
+  --bg: #0a0a0f;
+  --card: #1c1b26;
+  --accent1: #7b6cff;
   --accent2: #1fded5;
-  --muted: #ccc;
-  --card-bg: #1b1a20;
-  --radius: 16px;
-  --dos-green: #1effa3;
-  --dont-red: #ff4c4c;
+  --muted: #aaa;
+  --radius: 20px;
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Inter', sans-serif; background: var(--bg-color); color: #fff; overflow-x: hidden; }
-img { max-width:100%; display:block; border-radius:12px; }
-a { color: inherit; text-decoration: none; }
-button { cursor: pointer; border: none; font-weight:700; }
+* { box-sizing: border-box; margin:0; padding:0; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top left, #0f0f18, #0a0a0f);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:40px 20px;
+  overflow-x:hidden;
+  position:relative;
+}
 
-canvas#particles { position: fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none; }
+body::before {
+  content:"";
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: url('/creatorassets/kenziethefloof/banner.webp') center/cover no-repeat;
+  opacity:0.05;
+  z-index:0;
+  animation: floatBG 20s ease-in-out infinite alternate;
+}
 
-/* HEADER / BANNER */
-header { position: relative; height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
-header .banner-bg { position:absolute; inset:0; background:url('/creatorassets/kenziethefloof/banner.webp') center/cover no-repeat; filter: brightness(0.5); z-index:0; }
-header .banner-overlay { position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 70%); z-index:1; }
-header .header-content { position: relative; z-index:2; display:flex; flex-direction: column; align-items:center; gap:20px; }
-header .pfp { width:180px; height:180px; border-radius:50%; border:4px solid rgba(255,255,255,0.1); }
-header h1 { font-size:36px; animation: fadeInUp 0.8s; }
-header p { color: var(--muted); animation: fadeInUp 1s; }
-header .cta-buttons { display:flex; gap:10px; animation: fadeInUp 1.2s; }
-.btn { padding:10px 16px; border-radius:12px; background: linear-gradient(90deg,var(--accent1),var(--accent2)); color:#010a0f; transition:0.3s; }
-.btn.secondary { background:transparent; border:1px solid rgba(255,255,255,0.1); color: var(--muted); }
-.btn:hover { transform: scale(1.05); }
+@keyframes floatBG {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-20px) scale(1.02); }
+  100% { transform: translateY(0px) scale(1); }
+}
 
-/* SECTION STYLES */
-section { max-width:1200px; margin:50px auto; padding:0 20px; z-index:1; position: relative; }
-section h2 { font-size:28px; margin-bottom:10px; }
-section p { color: var(--muted); margin-bottom:20px; }
+main.card {
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width:480px;
+  background: linear-gradient(145deg, rgba(28,27,38,0.95), rgba(28,27,38,0.9));
+  border-radius: var(--radius);
+  padding:32px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.7);
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  animation:fadeUp 1s ease forwards;
+}
 
-/* FURSONA ID */
-.gov-id { display:flex; flex-wrap:wrap; gap:20px; background: var(--card-bg); padding:20px; border-radius:var(--radius); }
-.gov-id .id-left { flex:0 0 220px; display:flex; align-items:center; justify-content:center; }
-.gov-id .id-left img { width:200px; height:200px; border-radius:12px; cursor:pointer; }
-.gov-id .id-right { flex:1; display:flex; flex-direction:column; gap:8px; }
-.id-field { display:flex; justify-content:space-between; background: rgba(255,255,255,0.05); padding:8px 12px; border-radius:10px; }
+h1 {color: aliceblue; font-family: 'Lucida Grande'} 
+@keyframes fadeUp { 0% {opacity:0; transform:translateY(30px);} 100% {opacity:1; transform:translateY(0);} }
 
-/* ABOUT ME */
-.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-.about-box { background: rgba(255,255,255,0.05); padding:16px; border-radius: var(--radius); }
+.profile { text-align:center; }
+.profile img {
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  border:4px solid rgba(255,255,255,0.1);
+  margin-bottom:16px;
+  animation: pulse 2.5s ease-in-out infinite;
+}
 
-/* DOS & DON'TS */
-.dos-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
-.split-card { display:flex; border-radius:999px; overflow:hidden; min-height:100px; transition:0.3s; cursor:pointer; }
-.split-card:hover { transform: scale(1.02); }
-.split-card .left { flex:1; background: var(--dos-green); display:flex; justify-content:center; align-items:center; flex-direction:column; font-weight:700; border-right:1px solid rgba(0,0,0,0.1); }
-.split-card .right { flex:1; background: var(--dont-red); display:flex; justify-content:center; align-items:center; flex-direction:column; font-weight:700; }
-.split-card i { margin-bottom:6px; font-size:20px; }
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
 
-/* LINKS */
-.links-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:12px; }
-.link-tile { background: var(--card-bg); padding:16px; border-radius:14px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; transition:0.3s; }
-.link-tile:hover { transform:translateY(-4px) scale(1.05); }
+.profile h1 { font-size:28px; font-weight:700; margin-bottom:6px; }
+.profile p { color: var(--muted); font-size:14px; line-height:1.5; }
 
-/* GALLERY WHEEL */
-.wheel-wrap { display:flex; flex-direction:column; align-items:center; gap:10px; }
-.wheel-stage { position:relative; width:600px; height:400px; }
-.wheel { position:absolute; left:50%; top:50%; transform: translate(-50%, -50%) rotate(0deg); width:500px; height:500px; border-radius:50%; transition: transform 0.8s ease; }
-.wheel .cell { position:absolute; left:50%; top:50%; transform-origin:0 -250px; width:120px; height:120px; border-radius:16px; background:var(--card-bg); border:1px solid rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; cursor:pointer; }
-.wheel-controls { display:flex; gap:10px; justify-content:center; margin-top:10px; }
-.control { padding:10px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.05); cursor:pointer; background:transparent; color:var(--muted); }
-.control.primary { background: linear-gradient(90deg,var(--accent1),var(--accent2)); color:#010a0f; font-weight:700; }
+.badges { margin-top:12px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
+.badge { background: rgba(255,255,255,0.06); padding:6px 12px; border-radius:999px; font-size:12px; color:#ddd; }
 
-/* ANIMATIONS */
-@keyframes fadeInUp {0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
+.links { display:flex; flex-direction:column; gap:14px; }
+.link {
+  display:flex; align-items:center; gap:12px;
+  padding:16px; border-radius:16px;
+  font-weight:600; background: rgba(255,255,255,0.05);
+  transition:0.3s; color:#fff;
+}
+.link i { width:24px; text-align:center; color: var(--accent1); font-size:18px; }
+.link:hover { transform:translateY(-3px); background: rgba(255,255,255,0.12); }
 
-/* RESPONSIVE */
-@media(max-width:900px){.about-grid{grid-template-columns:1fr;}.wheel-stage{width:100%;height:300px;}.wheel{width:350px;height:350px;}.wheel .cell{width:100px;height:100px;transform-origin:0 -175px;}}
-@media(max-width:500px){header .header-content{gap:10px;}.pfp{width:140px;height:140px;}}
+.footer { text-align:center; font-size:12px; color:var(--muted); margin-top:16px; }
+.footer img { height:36px; margin-top:6px; opacity:0.95; transition: transform 0.3s; }
+.footer img:hover { transform: scale(1.05) rotate(5deg); }
+
+@media(max-width:500px) {
+  main.card { padding:24px; }
+  .profile img { width:120px; height:120px; }
+  .link { padding:12px; }
+}
 </style>
 </head>
+
 <body>
-
-<canvas id="particles"></canvas>
-
-<header>
-  <div class="banner-bg"></div>
-  <div class="banner-overlay"></div>
-  <div class="header-content">
-    <img src="/creatorassets/kenziethefloof/pfp2.webp" alt="KenzieTheFloof" class="pfp">
+<main class="card">
+  <section class="profile">
+    <img src="/creatorassets/kenziethefloof/pfp2.webp" alt="KenzieTheFloof Logo">
     <h1>KenzieTheFloof</h1>
-    <p>Event organiser, video editor, actor & director</p>
-    <p>Pronouns: Any | Age: 14 | Location: Central Europe</p>
-  </div>
-</header>
-
-<section id="fursona-id">
-  <h2>Fursona ID</h2>
-  <p>Official fursona reference.</p>
-  <div class="gov-id">
-    <div class="id-left"><img src="/creatorassets/kenziethefloof/pfp.webp" alt="Fursona Photo" id="id-photo"></div>
-    <div class="id-right">
-      <div class="id-field"><strong>Full name:</strong> KenzieTheFloof</div>
-      <div class="id-field"><strong>Age:</strong> 14</div>
-      <div class="id-field"><strong>Species:</strong> Hyena Hybrid</div>
-      <div class="id-field"><strong>Pronouns:</strong> Any</div>
-      <div class="id-field"><strong>Sexuality:</strong> Pansexual</div>
-      <div class="id-actions">
-          <a href="/creatorassets/kenziethefloof/ref.webp"><button class="btn" id="open-ref">Download Ref Sheet</button></a>      </div>
+    <p>Event organiser, video editor, actor & director<br>Age 14 | Central Europe</p>
+    <div class="badges">
+      <div class="badge">Management</div>
+      <div class="badge">Event Organiser</div>
+      <div class="badge">Video Editing</div>
     </div>
+  </section>
+
+  <nav class="links">
+    <a class="link" href="https://www.tiktok.com/@kenziethefloof" target="_blank">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
+    <a class="link" href="https://www.instagram.com/kenziethefloof" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a class="link" href="https://www.youtube.com/@kenziethefloof" target="_blank">
+      <i class="fab fa-youtube"></i> YouTube
+    </a>
+    <a class="link" href="https://discordapp.com/users/792268824056561664" target="_blank">
+      <i class="fab fa-discord"></i> Discord
+    </a>
+    <a class="link" href="/creatorassets/kenziethefloof/ref.webp" target="_blank">
+      <i class="fa-solid fa-id-card"></i> Fursona Reference
+    </a>
+  </nav>
+
+  <div class="footer">
+    Official profile hosted by<br>
+    <a href="https://socialfurs.com" target="_blank">
+      <img src="logow.png" alt="SocialFurs Logo">
+    </a>
   </div>
-</section>
-
-<section id="about-me">
-  <h2>About Me</h2>
-  <p>Hi! I'm Kenzie, a multi-talented furry creator. I love organising events, making content, and connecting with the community. Here’s a little more about me:</p>
-  <div class="about-grid">
-      <div class="about-box"><h3>Things I Like:</h3><p>Nature, Going outside with my friends, Traveling abroad, Going to my favourite theme park, Organising events, Editing videos &amp; photos, Website development, Taking silly fursuit photos,</p></div>
-    <div class="about-box"><h3>Skills / Good At:</h3><p>Event organisation, Digital media editing, Acting, Directing, Social media content creation, Recording, Photography, Web development, Sleeping, Procrastination</p></div>
-  </div>
-</section>
-
-<section id="gallery">
-  <h2>Gallery</h2>
-  <p>Click images to see more details.</p>
-  <div class="wheel-wrap">
-    <div class="wheel-stage">
-      <div class="wheel" id="wheel">
-        <div class="cell" data-title="Profile Picture" ><img src="/creatorassets/kenziethefloof/pfp.webp" alt="Kenzie 1"></div>
-        <div class="cell" data-title="0.5 Silly" ><img src="/creatorassets/kenziethefloof/pfp2.webp" alt="Kenzie 2"></div>
-        <div class="cell" data-title="Reference Sheet" ><img src="/creatorassets/kenziethefloof/ref.webp" alt="Ref Sheet"></div>
-        <div class="cell" data-title="Femboy" ><img src="/creatorassets/kenziethefloof/femboy.webp" alt="Kenzie 4"></div>
-      </div>
-    </div>
-    <div class="wheel-controls">
-      <button class="control" id="prev">&#10094;</button>
-      <button class="control" id="next">&#10095;</button>
-    </div>
-  </div>
-
-  <!-- Modal for image details -->
-  <div id="modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;z-index:100;">
-    <div style="position:relative;background:#111;padding:20px;border-radius:16px;max-width:90%;max-height:90%;text-align:center;">
-      <span id="close-modal" style="position:absolute;top:10px;right:16px;font-size:24px;cursor:pointer;color:#fff;">&times;</span>
-      <img id="modal-img" src="" alt="" style="max-width:80vw;max-height:60vh;border-radius:12px;margin-bottom:16px;">
-      <h3 id="modal-title" style="color:#fff;margin-bottom:8px;"></h3>
-      <p id="modal-desc" style="color:#ccc;"></p>
-    </div>
-  </div>
-</section>
-
-<script>
-// Gallery wheel rotation & positioning
-const wheel = document.getElementById('wheel');
-const cells = Array.from(wheel.children);
-const total = cells.length;
-let angle = 0;
-
-// Position cells evenly around a circle
-function positionCells() {
-  const radius = 200; // distance from center
-  const centerX = 0;
-  const centerY = 0;
-  const angleStep = (2 * Math.PI) / total;
-  cells.forEach((cell, i) => {
-    const theta = i * angleStep;
-    const x = radius * Math.cos(theta);
-    const y = radius * Math.sin(theta);
-    cell.style.position = 'absolute';
-    cell.style.left = `${50 + x / 3}%`; // divide by 3 to fit stage
-    cell.style.top = `${50 + y / 3}%`;
-    cell.style.transform = 'translate(-50%, -50%)';
-    cell.style.cursor = 'pointer';
-  });
-}
-positionCells();
-
-// Rotate wheel
-function rotateWheel(dir) {
-  angle += dir * (360 / total);
-  wheel.style.transition = 'transform 0.6s';
-  wheel.style.transform = `rotate(${angle}deg)`;
-}
-document.getElementById('prev').addEventListener('click', () => rotateWheel(-1));
-document.getElementById('next').addEventListener('click', () => rotateWheel(1));
-
-// Modal functionality
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
-const modalTitle = document.getElementById('modal-title');
-const modalDesc = document.getElementById('modal-desc');
-const closeModal = document.getElementById('close-modal');
-
-cells.forEach(cell => {
-  cell.addEventListener('click', () => {
-    modal.style.display = 'flex';
-    modalImg.src = cell.querySelector('img').src;
-    modalTitle.textContent = cell.dataset.title;
-    modalDesc.textContent = cell.dataset.desc;
-  });
-});
-closeModal.addEventListener('click', () => modal.style.display = 'none');
-modal.addEventListener('click', (e) => {if(e.target === modal) modal.style.display = 'none';});
-</script>
-
-<section id="links">
-  <h2>Links</h2>
-  <div class="links-grid">
-    <a href="https://www.tiktok.com/@kenziethefloof"><div class="link-tile"><i class="fab fa-tiktok fa-2x"></i><span>TikTok</span></div></a>
-    <a href="https://www.instagram.com/kenziethefloof"><div class="link-tile"><i class="fab fa-instagram fa-2x"></i><span>Instagram</span></div></a>
-    <a href="https://discordapp.com/users/792268824056561664"><div class="link-tile"><i class="fab fa-discord fa-2x"></i><span>Discord</span></div></a>
-    <a href="https://www.youtube.com/@kenziethefloof"><div class="link-tile"><i class="fab fa-youtube fa-2x"></i><span>Youtube</span></div></a>
-  </div>
-</section>
-
-<script>
-// Particle background
-const canvas=document.getElementById('particles');const ctx=canvas.getContext('2d');canvas.width=window.innerWidth;canvas.height=window.innerHeight;
-let particles=[];for(let i=0;i<120;i++){particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*2+1,dx:(Math.random()-0.5)*0.7,dy:(Math.random()-0.5)*0.7});}
-function animateParticles(){ctx.clearRect(0,0,canvas.width,canvas.height);particles.forEach(p=>{p.x+=p.dx;p.y+=p.dy;if(p.x>canvas.width)p.x=0;if(p.x<0)p.x=canvas.width;if(p.y>canvas.height)p.y=0;if(p.y<0)p.y=canvas.height;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle="rgba(255,255,255,0.05)";ctx.fill();});requestAnimationFrame(animateParticles);}
-animateParticles();window.addEventListener('resize',()=>{canvas.width=window.innerWidth;canvas.height=window.innerHeight;});
-
-
-
-// Buttons
-document.getElementById('download-ref').addEventListener('click',()=>alert('Download ref functionality here'));
-document.getElementById('open-id').addEventListener('click',()=>document.getElementById('fursona-id').scrollIntoView({behavior:'smooth'}));
-document.getElementById('jump-gallery').addEventListener('click',()=>document.getElementById('gallery').scrollIntoView({behavior:'smooth'}));
-</script>
-  <!-- START Powered by SocialFurs -->
-<div id="powered-by-sf">
-  <a href="https://socialfurs.com" target="_blank">
-    <span>Powered by</span>
-    <img src="logo.png" alt="SocialFurs Logo">
-  </a>
-</div>
-
-<style>
-#powered-by-sf {
-  width: 100%;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0;
-  font-family: 'Inter', sans-serif;
-  box-shadow: 0 -1px 6px rgba(0,0,0,0.08);
-}
-
-#powered-by-sf a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: #555;
-  font-weight: 500;
-  font-size: 12px; /* small text */
-  animation: float 3s ease-in-out infinite;
-}
-
-#powered-by-sf a img {
-  height: 64px; /* much bigger logo */
-  width: auto;
-  display: block;
-  transition: transform 0.3s;
-}
-
-#powered-by-sf a:hover img {
-  transform: rotate(10deg) scale(1.1);
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-3px); }
-}
-</style>
-<!-- END Powered by SocialFurs -->
+</main>
 </body>
 </html>
