@@ -1,334 +1,355 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>SocialFurs</title>
+    <title>SocialFurs</title>
 
-<meta name="description"
-      content="SocialFurs is a private creative collective representing furry and therian talent. Focused on structured collaboration, long term projects, and responsible creative work.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-<meta name="keywords"
-      content="creative collective, talent representation, furry creators, therian creators, private creative organisation, creative collaboration, managed creative projects">
+    <meta
+      name="description"
+      content="SocialFurs is a private creative collective representing furry and therian talent. Focused on structured collaboration, long term projects, and responsible creative work." />
 
-<meta name="author" content="SocialFurs">
-<meta name="robots" content="index, follow">
-<meta name="googlebot" content="index, follow">
+    <meta
+      name="keywords"
+      content="creative collective, talent representation, furry creators, therian creators, private creative organisation, creative collaboration, managed creative projects" />
 
-<meta http-equiv="content-language" content="en-GB">
+    <meta name="author" content="SocialFurs" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
 
-<link rel="canonical" href="https://socialfurs.com/">
+    <meta http-equiv="content-language" content="en-GB" />
 
-<!-- Open Graph -->
-<meta property="og:site_name" content="SocialFurs">
-<meta property="og:title" content="SocialFurs | Private Creative Collective">
-<meta property="og:description"
-      content="A private creative collective representing furry and therian talent through structured collaboration, project coordination, and clear standards.">
-<meta property="og:type" content="organization">
-<meta property="og:url" content="https://socialfurs.com/">
+    <link rel="canonical" href="https://socialfurs.com/" />
 
-<!-- Twitter / X -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SocialFurs">
-<meta name="twitter:description"
-      content="A private creative collective supporting structured, intentional creative work.">
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="SocialFurs" />
+    <meta property="og:title" content="SocialFurs | Private Creative Collective" />
+    <meta
+      property="og:description"
+      content="A private creative collective representing furry and therian talent through structured collaboration, project coordination, and clear standards." />
+    <meta property="og:type" content="organization" />
+    <meta property="og:url" content="https://socialfurs.com/" />
 
-  <!-- Visual polish -->
-  <meta name="theme-color" content="#0b0b0f">
-  <meta name="color-scheme" content="dark">
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="SocialFurs" />
+    <meta
+      name="twitter:description"
+      content="A private creative collective supporting structured, intentional creative work." />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Visual polish -->
+    <meta name="theme-color" content="#0b0b0f" />
+    <meta name="color-scheme" content="dark" />
 
-  <!-- Microsoft Clarity (original, unchanged) -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "tt6wsdhwye");
-  </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet" />
 
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "SocialFurs",
-    "url": "https://socialfurs.com/",
-    "logo": "https://socialfurs.com/logow.png",
-    "description": "Private creative collective representing furry and therian creators",s
-    ]
-  }
-  </script>
-  <style>
-    :root {
-      --bg: #0b0b0f;
-      --bg-soft: #11111a;
-      --card: #161620;
-      --accent: #9900ef;
-      --text: #ffffff;
-      --muted: #b8b8c6;
-      --border: rgba(255,255,255,0.08);
-    }
+    <!-- Microsoft Clarity (original, unchanged) -->
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "tt6wsdhwye");
+    </script>
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behaviour: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', system-ui, sans-serif;
-      background:
-        radial-gradient(900px circle at top, rgba(153,0,239,0.12), transparent 60%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.75;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Roboto Slab', serif;
-      letter-spacing: -0.02em;
-      margin: 0 0 14px;
-    }
-
-    p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    section {
-      padding: 150px 22px;
-    }
-
-    .wrap {
-      max-width: 760px;
-      margin: 0 auto;
-      text-align: centre;
-    }
-
-    /* entrance animation */
-    .fade {
-      opacity: 0;
-      transform: translateY(28px);
-      animation: fadeUp 0.9s ease forwards;
-    }
-
-    .delay-1 { animation-delay: 0.2s; }
-    .delay-2 { animation-delay: 0.4s; }
-    .delay-3 { animation-delay: 0.6s; }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SocialFurs",
+        "url": "https://socialfurs.com/",
+        "logo": "https://socialfurs.com/logow.png",
+        "description": "Private creative collective representing furry and therian creators",s
+        ]
       }
-    }
+    </script>
+    <style>
+      :root {
+        --bg: #0b0b0f;
+        --bg-soft: #11111a;
+        --card: #161620;
+        --accent: #9900ef;
+        --text: #ffffff;
+        --muted: #b8b8c6;
+        --border: rgba(255, 255, 255, 0.08);
+      }
 
-    /* LOGO INTRO */
-    .intro {
-      padding-top: 120px;
-      padding-bottom: 0;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    .intro img {
-      width: 110px;
-      margin-bottom: 48px;
-      opacity: 0.9;
-    }
+      html {
+        scroll-behaviour: smooth;
+      }
 
-    /* HERO */
-    .hero h1 {
-      font-size: clamp(2.4rem, 4vw, 3.2rem);
-    }
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, sans-serif;
+        background: radial-gradient(900px circle at top, rgba(153, 0, 239, 0.12), transparent 60%), var(--bg);
+        color: var(--text);
+        line-height: 1.75;
+      }
 
-    .hero p {
-      max-width: 620px;
-      margin: 30px auto 0;
-      font-size: 1.05rem;
-    }
+      h1,
+      h2,
+      h3 {
+        font-family: "Roboto Slab", serif;
+        letter-spacing: -0.02em;
+        margin: 0 0 14px;
+      }
 
-    .divider {
-      margin: 90px auto 0;
-      width: 120px;
-      height: 1px;
-      background: linear-gradient(
-        to right,
-        transparent,
-        rgba(255,255,255,0.25),
-        transparent
-      );
-    }
+      p {
+        margin: 0;
+        color: var(--muted);
+      }
 
-    .soft {
-      background: var(--bg-soft);
-    }
+      section {
+        padding: 150px 22px;
+      }
 
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 36px;
-      margin-top: 40px;
-      text-align: left;
-    }
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: centre;
+      }
 
-    .card h3 {
-      margin-bottom: 10px;
-    }
+      /* entrance animation */
+      .fade {
+        opacity: 0;
+        transform: translateY(28px);
+        animation: fadeUp 0.9s ease forwards;
+      }
 
-    .creator {
-      margin-top: 64px;
-      padding: 36px;
-      background: var(--card);
-      border-radius: 22px;
-      border: 1px solid var(--border);
-    }
+      .delay-1 {
+        animation-delay: 0.2s;
+      }
+      .delay-2 {
+        animation-delay: 0.4s;
+      }
+      .delay-3 {
+        animation-delay: 0.6s;
+      }
 
-    .creator img {
-      width: 160px;
-      border-radius: 18px;
-      margin-bottom: 20px;
-    }
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-    .invite {
-      display: inline-block;
-      margin-top: 52px;
-      padding: 14px 40px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: #fff;
-      font-weight: 700;
-      text-decoration: none;
-    }
+      /* LOGO INTRO */
+      .intro {
+        padding-top: 120px;
+        padding-bottom: 0;
+      }
 
-    footer {
-      padding: 100px 22px;
-      text-align: centre;
-      border-top: 1px solid var(--border);
-      background: var(--bg);
-      font-size: 14px;
-    }
-  </style>
-</head>
+      .intro img {
+        width: 110px;
+        margin-bottom: 48px;
+        opacity: 0.9;
+      }
 
-<body>
-<p style="position:absolute; width:1px; height:1px; overflow:hidden; opacity:0;">
-  SocialFurs is a private collective representing furry and therian artists,
-  musicians, editors, and community organisers, focused on long term projects, safe collaboration,
-  and intentional creative development.
-<main>
+      /* HERO */
+      .hero h1 {
+        font-size: clamp(2.4rem, 4vw, 3.2rem);
+      }
 
-<section class="intro">
-  <div class="wrap">
-    <!-- swap logo.png or logow.png here -->
-    <img src="logow.png" alt="SocialFurs logo" class="fade">
-  </div>
-</section>
+      .hero p {
+        max-width: 620px;
+        margin: 30px auto 0;
+        font-size: 1.05rem;
+      }
 
-<section class="hero">
-  <div class="wrap">
-    <h1 class="fade delay-1">
-      A private creative collective built on trust, structure, and intent
-    </h1>
-    <p class="fade delay-2">
-         SocialFurs operates as a small, curated creative organisation supporting furry
-      and therian talent through collaboration, project coordination, and shared standards.
-      The focus is not visibility, but sustainable creative work.
-    </p>
-    <div class="divider fade delay-3"></div>
-  </div>
-</section>
+      .divider {
+        margin: 90px auto 0;
+        width: 120px;
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.25), transparent);
+      }
 
-<section class="soft">
-  <div class="wrap">
-    <h2 class="fade">Structured by design</h2>
-    <p class="fade delay-1">
-      SocialFurs is intentionally limited in size to preserve quality, safety,
-      and clarity of direction.
-    </p>
+      .soft {
+        background: var(--bg-soft);
+      }
 
-    <div class="card fade delay-2">
-      <h3>Selective membership</h3>
-      <p>
-        All members are reviewed before acceptance. This allows the collective to
-        maintain shared expectations, age safety, and professional boundaries.
-      </p>
-    </div>
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        padding: 36px;
+        margin-top: 40px;
+        text-align: left;
+      }
 
-    <div class="card fade delay-3">
-      <h3>No public performance metrics</h3>
-      <p>
-        There are no follower counts, engagement systems, or algorithmic visibility.
-        Work is evaluated on substance and reach.
-      </p>
-    </div>
-  </div>
-</section>
+      .card h3 {
+        margin-bottom: 10px;
+      }
 
-<section>
-  <div class="wrap">
-    <h2 class="fade">What SocialFurs supports</h2>
-    <p class="fade delay-1">
-      The collective exists to support tangible creative output and responsible collaboration.
-    </p>
+      .creator {
+        margin-top: 64px;
+        padding: 36px;
+        background: var(--card);
+        border-radius: 22px;
+        border: 1px solid var(--border);
+      }
 
-    <div class="card fade delay-2">
-      <h3>Creator representation</h3>
-      <p>
-        Members are represented through focused profiles outlining their skills,
-        interests, and active work, without pressure to self promote constantly.
-      </p>
-    </div>
+      .creator img {
+        width: 160px;
+        border-radius: 18px;
+        margin-bottom: 20px;
+      }
 
-    <div class="card fade delay-3">
-      <h3>Project coordination</h3>
-      <p>
-        SocialFurs facilitates collaborative projects including editing teams,
-        music releases, publications, and community initiatives under clear moderation.
-      </p>
-    </div>
+      .invite {
+        display: inline-block;
+        margin-top: 52px;
+        padding: 14px 40px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+      }
 
-    <div class="card fade delay-3">
-      <h3>Real world responsibility</h3>
-      <p>
-        Any offline activity connected to the collective follows explicit rules,
-        supervision standards, and safety requirements as a baseline.
-      </p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="wrap">
-    <h2 class="fade">Applying to join</h2>
-    <p class="fade delay-1">
-      Access to SocialFurs is application based. This ensures alignment with the
-      collective’s values and working standards.
+      footer {
+        padding: 100px 22px;
+        text-align: centre;
+        border-top: 1px solid var(--border);
+        background: var(--bg);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0">
+      SocialFurs is a private collective representing furry and therian artists, musicians, editors, and community
+      organisers, focused on long term projects, safe collaboration, and intentional creative development.
     </p>
 
-    <p class="fade delay-2" style="margin-top:30px;">
-      Accepted applicants gain access to internal projects, coordination spaces,
-      and ongoing creative work.
-    </p>
-    <div style="height: 1vh"></div>
-<div data-fillout-id="3PL7RQXhMjus" data-fillout-embed-type="popup" data-fillout-button-text="Apply Now" data-fillout-dynamic-resize data-fillout-button-color="#B562F8" data-fillout-inherit-parameters data-fillout-popup-size="medium"></div><script src="https://server.fillout.com/embed/v1/"></script>
-  </div>
-</section>
+    <main>
+      <section class="intro">
+        <div class="wrap">
+          <!-- swap logo.png or logow.png here -->
+          <img src="logow.png" alt="SocialFurs logo" class="fade" />
+        </div>
+      </section>
 
-</main>
+      <section class="hero">
+        <div class="wrap">
+          <h1 class="fade delay-1">A private creative collective built on trust, structure, and intent</h1>
+          <p class="fade delay-2">
+            SocialFurs operates as a small, curated creative organisation supporting furry and therian talent through
+            collaboration, project coordination, and shared standards. The focus is not visibility, but sustainable
+            creative work.
+          </p>
+          <div class="divider fade delay-3"></div>
+        </div>
+      </section>
 
-<footer>
-  <p>© 2026 SocialFurs</p>
-  <p>We see your idea, you see our support.</p>
-</footer>
+      <section class="soft">
+        <div class="wrap">
+          <h2 class="fade">Structured by design</h2>
+          <p class="fade delay-1">
+            SocialFurs is intentionally limited in size to preserve quality, safety, and clarity of direction.
+          </p>
 
-</body>
+          <div class="card fade delay-2">
+            <h3>Selective membership</h3>
+            <p>
+              All members are reviewed before acceptance. This allows the collective to maintain shared expectations,
+              age safety, and professional boundaries.
+            </p>
+          </div>
+
+          <div class="card fade delay-3">
+            <h3>No public performance metrics</h3>
+            <p>
+              There are no follower counts, engagement systems, or algorithmic visibility. Work is evaluated on
+              substance and reach.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2 class="fade">What SocialFurs supports</h2>
+          <p class="fade delay-1">
+            The collective exists to support tangible creative output and responsible collaboration.
+          </p>
+
+          <div class="card fade delay-2">
+            <h3>Creator representation</h3>
+            <p>
+              Members are represented through focused profiles outlining their skills, interests, and active work,
+              without pressure to self promote constantly.
+            </p>
+          </div>
+
+          <div class="card fade delay-3">
+            <h3>Project coordination</h3>
+            <p>
+              SocialFurs facilitates collaborative projects including editing teams, music releases, publications, and
+              community initiatives under clear moderation.
+            </p>
+          </div>
+
+          <div class="card fade delay-3">
+            <h3>Real world responsibility</h3>
+            <p>
+              Any offline activity connected to the collective follows explicit rules, supervision standards, and safety
+              requirements as a baseline.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <h2 class="fade">Applying to join</h2>
+          <p class="fade delay-1">
+            Access to SocialFurs is application based. This ensures alignment with the collective’s values and working
+            standards.
+          </p>
+
+          <p class="fade delay-2" style="margin-top: 30px">
+            Accepted applicants gain access to internal projects, coordination spaces, and ongoing creative work.
+          </p>
+          <div style="height: 1vh"></div>
+          <div
+            data-fillout-id="3PL7RQXhMjus"
+            data-fillout-embed-type="popup"
+            data-fillout-button-text="Apply Now"
+            data-fillout-dynamic-resize
+            data-fillout-button-color="#B562F8"
+            data-fillout-inherit-parameters
+            data-fillout-popup-size="medium"></div>
+          <script src="https://server.fillout.com/embed/v1/"></script>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 SocialFurs</p>
+      <p>We see your idea, you see our support.</p>
+    </footer>
+  </body>
 </html>
